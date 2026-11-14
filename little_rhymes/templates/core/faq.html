@@ -1,0 +1,2 @@
+{% extends 'base.html' %}
+{% block content %}<section class="page-intro"><div class="container"><div class="eyebrow">HERE TO HELP</div><h1>{{ title }}</h1><p>For parents, teachers, and wonderfully curious minds.</p></div></section><section class="section"><div class="container prose">{% include 'includes/faq.html' %}<p>Still curious? <a href="{% url 'contact' %}">Send us a little note.</a></p></div></section>{% endblock %}

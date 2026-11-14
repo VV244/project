@@ -1,0 +1,11 @@
+{% load static %}
+<article class="poem-card">
+  <div class="poem-card-art art-{{ poem.illustration }}">
+    <a href="{{ poem.get_absolute_url }}" tabindex="-1" aria-hidden="true">{% if poem.thumbnail %}<img src="{{ poem.thumbnail.url }}" alt="" loading="lazy" width="480" height="300">{% else %}{% with 'images/'|add:poem.illustration|add:'.svg' as art %}<img src="{% static art %}" alt="" loading="lazy" width="480" height="300">{% endwith %}{% endif %}</a>
+    <span class="language-badge" lang="{{ poem.language.code }}" dir="{{ poem.language.text_direction }}">{{ poem.language.native_name }}</span>
+    <button class="favorite-button" data-favorite="{{ poem.pk }}" type="button" aria-label="Save {{ poem.title }} to favorites" aria-pressed="false">♡</button>
+  </div>
+  <div class="poem-card-body"><div class="card-meta">{% for level in poem.classes.all %}{{ level.name }}{% if not forloop.last %} · {% endif %}{% endfor %}<span aria-hidden="true">✦</span>{% for category in poem.categories.all|slice:':1' %}{{ category.name }}{% endfor %}</div>
+  <h3 lang="{{ poem.language.code }}" dir="{{ poem.language.text_direction }}"><a href="{{ poem.get_absolute_url }}">{{ poem.title }}</a></h3><p>{{ poem.short_description|truncatechars:95 }}</p>
+  <div class="card-actions"><a class="read-link" href="{{ poem.get_absolute_url }}">Read poem <span aria-hidden="true"><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span></a><a class="listen-link" href="{{ poem.get_absolute_url }}#listen"><span aria-hidden="true">♫</span> Listen</a>{% if poem.video_url %}<a class="listen-link" href="{{ poem.get_absolute_url }}#watch">▷ Watch</a>{% endif %}</div></div>
+</article>

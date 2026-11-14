@@ -1,0 +1,139 @@
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/nunito-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("../fonts/nunito-600-1.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("../fonts/nunito-700-2.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 800;
+  font-display: swap;
+  src: url("../fonts/nunito-800-3.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Nunito';
+  font-style: normal;
+  font-weight: 900;
+  font-display: swap;
+  src: url("../fonts/nunito-900-4.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-devanagari-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  font-style: normal;
+  font-weight: 600;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-devanagari-600-1.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Devanagari';
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-devanagari-700-2.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Nastaliq Urdu';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("../fonts/noto-nastaliq-urdu-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Gujarati';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-gujarati-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Tamil';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-tamil-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Telugu';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-telugu-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Kannada';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-kannada-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Malayalam';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-malayalam-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Bengali';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-bengali-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Gurmukhi';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-gurmukhi-400-0.woff2") format("woff2");
+}
+@font-face {
+  font-family: 'Noto Sans Oriya';
+  font-style: normal;
+  font-weight: 400;
+  font-stretch: normal;
+  font-display: swap;
+  src: url("../fonts/noto-sans-oriya-400-0.woff2") format("woff2");
+}
+[lang="hi"],[lang="mr"]{font-family:"Noto Sans Devanagari",Nunito,sans-serif;letter-spacing:0}[lang="ur"]{font-family:"Noto Nastaliq Urdu",serif;line-height:2.3;letter-spacing:0}[lang="gu"]{font-family:"Noto Sans Gujarati",sans-serif;letter-spacing:0}
+[lang="ta"]{font-family:"Noto Sans Tamil",sans-serif;letter-spacing:0}
+[lang="te"]{font-family:"Noto Sans Telugu",sans-serif;letter-spacing:0}
+[lang="kn"]{font-family:"Noto Sans Kannada",sans-serif;letter-spacing:0}
+[lang="ml"]{font-family:"Noto Sans Malayalam",sans-serif;letter-spacing:0}
+[lang="bn"]{font-family:"Noto Sans Bengali",sans-serif;letter-spacing:0}
+[lang="as"]{font-family:"Noto Sans Bengali",sans-serif;letter-spacing:0}
+[lang="pa"]{font-family:"Noto Sans Gurmukhi",sans-serif;letter-spacing:0}
+[lang="or"]{font-family:"Noto Sans Oriya",sans-serif;letter-spacing:0}

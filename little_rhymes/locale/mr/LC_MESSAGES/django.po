@@ -1,0 +1,23 @@
+msgid ""
+msgstr "Project-Id-Version: Little Rhymes 1.0\nLanguage: mr\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\nPlural-Forms: nplurals=2; plural=(n != 1);\n"
+
+msgid "Home"
+msgstr "मुखपृष्ठ"
+
+msgid "Explore Poems"
+msgstr "कविता शोधा"
+
+msgid "Classes"
+msgstr "वर्ग"
+
+msgid "Languages"
+msgstr "भाषा"
+
+msgid "Categories"
+msgstr "प्रकार"
+
+msgid "About Us"
+msgstr "आमच्याबद्दल"
+
+msgid "Contact Us"
+msgstr "संपर्क करा"

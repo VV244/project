@@ -1,0 +1,56 @@
+name: Django verification
+on: [push, pull_request]
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:17
+        env:
+          POSTGRES_DB: little_rhymes
+          POSTGRES_USER: rhymes
+          POSTGRES_PASSWORD: ci-only-not-a-real-secret
+        ports: ['5432:5432']
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+      redis:
+        image: redis:7
+        ports: ['6379:6379']
+        options: >-
+          --health-cmd "redis-cli ping"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      DEBUG: 'True'
+      DATABASE_URL: postgresql://rhymes:ci-only-not-a-real-secret@127.0.0.1:5432/little_rhymes
+      DATABASE_SSL_REQUIRE: 'False'
+      REDIS_URL: redis://127.0.0.1:6379/15
+      ALLOWED_HOSTS: localhost,127.0.0.1,testserver
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+      - run: python -m pip install -r requirements.txt
+      - run: python -m pip check
+      - run: python manage.py check
+      - run: python manage.py makemigrations --check --dry-run
+      - run: python manage.py migrate --noinput
+      - run: python manage.py test
+      - run: python manage.py collectstatic --noinput
+      - name: Production configuration checks (no cloud writes)
+        env:
+          DEBUG: 'False'
+          SECRET_KEY: ci-validation-key-only-1234567890-abcdefghijklmnopqrstuvwxyz-9876543210
+          SITE_URL: https://rhymes.example.test
+          CSRF_TRUSTED_ORIGINS: https://rhymes.example.test
+          USE_S3: 'True'
+          AWS_STORAGE_BUCKET_NAME: ci-validation-no-real-bucket
+          MEDIA_ORIGINS: https://ci-validation-no-real-bucket.s3.ap-south-1.amazonaws.com
+        run: python manage.py check --deploy --fail-level ERROR

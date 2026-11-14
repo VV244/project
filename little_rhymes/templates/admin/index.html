@@ -1,0 +1,5 @@
+{% extends 'admin/index.html' %}
+{% block content %}
+{% if studio_stats %}<section aria-label="Library statistics"><h2>Library at a glance</h2><dl>{% for label, count in studio_stats %}<dt>{{ label }}</dt><dd><strong>{{ count }}</strong></dd>{% endfor %}</dl></section>{% endif %}
+{{ block.super }}
+{% endblock %}

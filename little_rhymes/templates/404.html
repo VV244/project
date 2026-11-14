@@ -1,0 +1,3 @@
+{% extends 'core/error.html' %}
+{% block title %}A little lost? · Little Rhymes{% endblock %}
+{% block content %}<section class="section"><div class="container empty-state"><span aria-hidden="true">☁</span><p class="eyebrow">404 · A LITTLE DETOUR</p><h1>This rhyme wandered off.</h1><p>Let’s find another little adventure together.</p><a href="{% url 'poems:list' %}" class="btn btn-primary">Explore the poems <i class="bi bi-arrow-up-right" aria-hidden="true"></i></a></div></section>{% endblock %}

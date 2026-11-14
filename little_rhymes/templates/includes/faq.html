@@ -1,0 +1,1 @@
+<div class="faq-list">{% for item in faqs %}<details><summary>{{ item.question }}<span aria-hidden="true">+</span></summary><p>{{ item.answer }}</p></details>{% empty %}<p>Have a question? <a href="{% url 'contact' %}">Our team can help.</a></p>{% endfor %}</div>
